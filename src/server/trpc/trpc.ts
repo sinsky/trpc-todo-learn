@@ -14,6 +14,7 @@ export const router = t.router;
 
 /**
  * Unprotected procedure
+ * 認証が不要なprocedure
  **/
 export const publicProcedure = t.procedure;
 
@@ -35,5 +36,6 @@ const isAuthed = t.middleware(({ ctx, next }) => {
 
 /**
  * Protected procedure
+ * 認証が必要なprocedure
  **/
 export const protectedProcedure = t.procedure.use(isAuthed);
