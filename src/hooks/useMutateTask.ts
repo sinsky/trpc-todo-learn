@@ -1,7 +1,7 @@
 import { trpc } from "utils/trpc";
 import useStore from "../store/index";
 
-const useMutateTask = () => {
+export const useMutateTask = () => {
   const utils = trpc.useContext();
   const reset = useStore((state) => state.resetEditedTask);
 
@@ -42,5 +42,3 @@ const useMutateTask = () => {
     deleteTaskMutation,
   };
 };
-
-export default useMutateTask;
