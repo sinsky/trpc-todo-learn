@@ -1,6 +1,6 @@
 import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 import Auth from "components/Auth";
-import Layout from "components/Layout";
+import { Layout } from "components/Layout";
 import { type NextPage } from "next";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
