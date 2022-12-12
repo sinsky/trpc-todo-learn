@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-const Layout: FC<Props> = ({ children, title }) => {
+export const Layout: FC<Props> = ({ children, title }) => {
   return (
     <>
       <Head>
@@ -18,5 +18,3 @@ const Layout: FC<Props> = ({ children, title }) => {
     </>
   );
 };
-
-export default Layout;
