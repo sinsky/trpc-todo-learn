@@ -15,11 +15,11 @@ export const TaskItem: FC<updateTaskInput> = ({ taskId, title, body }) => {
       </Link>
       <div className="float-right ml-20 flex">
         <PencilIcon
-          className="mx-1 h-5 p-5 cursor-pointer text-blue-600"
+          className="mx-1 h-5 w-5 cursor-pointer text-blue-600"
           onClick={() => update({ taskId, title, body })}
         />
         <TrashIcon
-          className="h-5 p-5 cursor-pointer text-blue-600"
+          className="h-5 w-5 cursor-pointer text-blue-600"
           onClick={() => deleteTaskMutation.mutate({ taskId })}
         />
       </div>
