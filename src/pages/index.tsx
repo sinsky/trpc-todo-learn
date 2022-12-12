@@ -1,6 +1,8 @@
 import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/solid";
 import Auth from "components/Auth";
 import { Layout } from "components/Layout";
+import { TaskForm } from "components/TaskForm";
+import { TaskList } from "components/TaskList";
 import { type NextPage } from "next";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
@@ -21,6 +23,8 @@ const Home: NextPage = (props) => {
       <div className="flex justify-center">
         {session.user?.image && <Image src={session.user?.image ?? ""} alt="" width={300} height={300} />}
       </div>
+      <TaskForm />
+      <TaskList />
     </Layout>
   );
 };
