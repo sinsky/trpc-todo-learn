@@ -2,6 +2,7 @@
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import NextAuth, { type NextAuthOptions } from "next-auth";
 import GitHubProvider from "next-auth/providers/github";
+import LineProvider from "next-auth/providers/line";
 import { env } from "../../../env/server.mjs";
 import { prisma } from "../../../server/db/client";
 
@@ -21,6 +22,10 @@ export const authOptions: NextAuthOptions = {
     GitHubProvider({
       clientId: env.GITHUB_CLIENT_ID,
       clientSecret: env.GITHUB_CLIENT_SECRET,
+    }),
+    LineProvider({
+      clientId: env.LINE_CLIENT_ID,
+      clientSecret: env.LINE_CLIENT_SECRET,
     }),
     // ...add more providers here
   ],
