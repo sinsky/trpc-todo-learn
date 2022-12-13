@@ -18,10 +18,26 @@ const Home: NextPage = (props) => {
     );
   return (
     <Layout title="Todo App">
-      <ArrowLeftOnRectangleIcon className="h-6 w-6 cursor-pointer text-blue-600" onClick={() => signOut()} />
-      <p className="my-3 text-xl text-blue-600">{session.user?.name}</p>
-      <div className="flex justify-center">
-        {session.user?.image && <Image src={session.user?.image ?? ""} alt="" width={300} height={300} />}
+      <div className="flex justify-between items-center mb-4">
+        <div className="flex justify-center">
+          {session.user?.image && (
+            <Image
+              className="rounded-full border-2 border-blue-300 pointer-events-none"
+              src={session.user?.image ?? ""}
+              alt=""
+              width={60}
+              height={60}
+            />
+          )}
+        </div>
+        <p className="my-3 mx-2 text-xl text-blue-800">{session.user?.name}</p>
+        <div
+          className="flex flex-col justify-center items-center text-blue-700 hover:text-blue-900 cursor-pointer hover:bg-blue-200 m-1 p-1"
+          onClick={() => signOut()}
+        >
+          <ArrowLeftOnRectangleIcon className="h-6 w-6" />
+          <span>logout</span>
+        </div>
       </div>
       <TaskForm />
       <TaskList />
