@@ -10,17 +10,22 @@ const config = {
   reactStrictMode: true,
   swcMinify: true,
   i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+    locales: ["ja"],
+    defaultLocale: "ja",
   },
   images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",
-        pathname: "/u/*"
-      }
-    ]
-  }
+        pathname: "/u/*",
+      },
+      {
+        protocol: "https",
+        hostname: "profile.line-scdn.net",
+        pathname: "/*",
+      },
+    ],
+  },
 };
 export default config;
