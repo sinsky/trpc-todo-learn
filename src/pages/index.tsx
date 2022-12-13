@@ -7,9 +7,10 @@ import { type NextPage } from "next";
 import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 
-const Home: NextPage = (props) => {
+const Home: NextPage = () => {
   // login sessionを取得
-  const { data: session } = useSession();
+  const { data: session, status } = useSession();
+  if (status === "loading") return <Layout title="loading">get session....</Layout>
   if (!session)
     return (
       <Layout title="Login">
