@@ -1,4 +1,4 @@
-import { updateTaskInput } from "schema/todo";
+import type { updateTaskInput } from "schema/todo";
 import create from "zustand";
 
 type State = {
