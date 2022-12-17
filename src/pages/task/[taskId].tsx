@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { trpc } from "utils/trpc";
 
-const SingleTaskPage = () => {
+const SingleTaskPage: NextPage = () => {
   const router = useRouter();
   const taskId = router.query.taskId as string;
   const { data, isLoading, error } = trpc.todo.getSingleTask.useQuery({ taskId });

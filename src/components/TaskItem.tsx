@@ -1,8 +1,8 @@
 import { PencilIcon, TrashIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import { FC } from "react";
+import type { FC } from "react";
 import { useMutateTask } from "../hooks/useMutateTask";
-import { updateTaskInput } from "../schema/todo";
+import type { updateTaskInput } from "../schema/todo";
 import useStore from "../store/index";
 
 export const TaskItem: FC<updateTaskInput> = ({ taskId, title, body }) => {
