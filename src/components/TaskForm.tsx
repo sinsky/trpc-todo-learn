@@ -40,7 +40,7 @@ export const TaskForm = () => {
       <p className="mb-3 text-pink-500">
         {createTaskMutation.error?.data?.zodError && createTaskMutation.error.data.zodError.fieldErrors.body}
       </p>
-      <button className="rounded bg-indigo-600 px-1 px-3 text-white hover:bg-indigo-700 focus:outline-none">
+      <button className="rounded bg-indigo-600 px-3 text-white hover:bg-indigo-700 focus:outline-none">
         {editedTask.taskId === "" ? "Create" : "Update"}
       </button>
     </form>
